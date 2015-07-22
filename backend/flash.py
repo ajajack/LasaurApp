@@ -18,6 +18,7 @@ def flash_upload(serial_port, resources_dir, firmware_file, hardware='x86'):
         CLOCK = "16000000"
         PROGRAMMER = "arduino"
         BITRATE = "115200"
+        BITRATE = "57600"
      
         if sys.platform == "darwin":  # OSX
             AVRDUDEAPP    = os.path.join(resources_dir, "firmware/tools_osx/avrdude")
