@@ -45,7 +45,7 @@ void control_init() {
   // OCR0A sets the duty cycle 0-255 corresponding to 0-100%
   // also see: http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM
   DDRD |= (1 << DDD6);      // set PD6 as an output
-  OCR0A = 0;              // set PWM to a 0% duty cycle
+  OCR0A = 255;              // set PWM to a 0% duty cycle
   TCCR0A = _BV(COM0A1) | _BV(WGM00);   // phase correct PWM mode
   // TCCR0A = _BV(COM0A1) | _BV(WGM01) | _BV(WGM00);  // fast PWM mode
   // prescaler: PWMfreq = 16000/(2*256*prescaler)
@@ -74,7 +74,7 @@ void control_init() {
 
 
 void control_laser_intensity(uint8_t intensity) {
-  OCR0A = intensity;
+  OCR0A = ~intensity;
 }
 
 

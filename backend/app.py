@@ -16,6 +16,7 @@ VERSION = "14.11b"
 COMPANY_NAME = "com.nortd.labs"
 SERIAL_PORT = None
 BITSPERSECOND = 57600
+#BITSPERSECOND = 9600
 NETWORK_PORT = 4444
 HARDWARE = 'x86'  # also: 'beaglebone', 'raspberrypi'
 CONFIG_FILE = "lasaurapp.conf"

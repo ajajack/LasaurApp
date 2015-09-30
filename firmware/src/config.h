@@ -32,16 +32,16 @@
 #define V1401
 
 #define BAUD_RATE 57600
-// #define DEBUG_IGNORE_SENSORS  // set for debugging
+//#define DEBUG_IGNORE_SENSORS  // set for debugging
 
 
 #ifndef V1401
-  #define CONFIG_X_STEPS_PER_MM 32.80839895 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
-  #define CONFIG_Y_STEPS_PER_MM 32.80839895 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
+  #define CONFIG_X_STEPS_PER_MM 28.83858270 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
+  #define CONFIG_Y_STEPS_PER_MM 32.55577430 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
   #define CONFIG_Z_STEPS_PER_MM 32.80839895 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
 #else
-  #define CONFIG_X_STEPS_PER_MM 88.88888888 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
-  #define CONFIG_Y_STEPS_PER_MM 90.90909090 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
+  #define CONFIG_X_STEPS_PER_MM 79.0872888798 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
+  #define CONFIG_Y_STEPS_PER_MM 78.1396363544 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
   #define CONFIG_Z_STEPS_PER_MM 33.33333333 //microsteps/mm (no integers, e.g. use 80.0 instead of 80)
 #endif
 #define CONFIG_PULSE_MICROSECONDS 5
@@ -112,7 +112,7 @@
 
 #ifdef DRIVEBOARD
   #define SENSE_MASK ((1<<CHILLER_BIT)|(1<<DOOR_BIT))
-  #define LIMIT_MASK ((1<<X1_LIMIT_BIT)|(1<<X2_LIMIT_BIT)|(1<<Y1_LIMIT_BIT)|(1<<Y2_LIMIT_BIT)|(1<<Z1_LIMIT_BIT)|(1<<Z2_LIMIT_BIT))
+  #define LIMIT_MASK ((1<<X1_LIMIT_BIT)|(1<<Y1_LIMIT_BIT))
 #else
   #define SENSE_MASK ((1<<POWER_BIT)|(1<<CHILLER_BIT)|(1<<DOOR_BIT))
   #define LIMIT_MASK ((1<<X1_LIMIT_BIT)|(1<<X2_LIMIT_BIT)|(1<<Y1_LIMIT_BIT)|(1<<Y2_LIMIT_BIT))
